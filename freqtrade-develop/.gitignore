@@ -100,13 +100,25 @@ target/
 # pyenv
 .python-version
 
+# Secrets and Environment
 .env
-.venv
+.env.*
+!.env.example
+
+# IDEs
 .idea
 .vscode
+*.swp
+*.swo
 
 .pytest_cache/
 .mypy_cache/
+
+# Results and Logs
+user_data/backtest_results/*
+user_data/hyperopt_results/*
+user_data/plot/*
+*.log
 
 #exceptions
 !*.gitkeep
@@ -114,5 +126,6 @@ target/
 !config_examples/config_full.example.json
 !config_examples/config_kraken.example.json
 !config_examples/config_freqai.example.json
+!user_data/config.json.example
 
 docker-compose-*.yml
